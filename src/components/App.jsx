@@ -108,7 +108,7 @@ export default class App extends Component {
       <>
         <Searchbar onSubmit={this.onSubmit} />
         {this.state.status === STATUS.REJECTED && (
-          <p style="textAlign: center">Fill in the search field...</p>
+          <p>Fill in the search field...</p>
         )}
 
         <ImageGallery>
