@@ -28,7 +28,7 @@ export default class App extends Component {
   async componentDidUpdate(_, prevState) {
     if (prevState.query !== this.state.query && this.state.query) {
       try {
-        this.setState({ page: 1, images: [], total: 0 });
+        await this.setState({ page: 1, images: [], total: 0 });
 
         const { data } = await api(this.state.query, this.state.page);
         this.setState({
